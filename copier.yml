@@ -33,7 +33,7 @@ wokwi_board_map:
 
 wokwi_board:
   type: str
-  default: "{{wokwi_board_map.get(board_map.get(esp32))}}"
+  default: "{{wokwi_board_map.get(esp32)}}"
   when: false
 
 _exclude:
