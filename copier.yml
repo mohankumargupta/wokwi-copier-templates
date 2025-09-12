@@ -22,3 +22,7 @@ esp32board:
   type: str
   default: "{{board_map.get(esp32, 'esp32dev')}}"
   when: false
+
+_exclude:
+  - .gitignore
+  - README.md
