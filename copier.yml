@@ -17,5 +17,5 @@ _board_map:
 
 esp32board:
   type: str
-  default: "{% if esp32 in _board_map %}{{ _board_map[esp32] }}{% else %}esp32dev{% endif %}"
+  default: "{{ _board_map.get(esp32, 'esp32dev') }}"
   when: false
