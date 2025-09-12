@@ -1,5 +1,9 @@
 esphome:
   name: {{project_name}}
+  on_boot:
+    - priority: -100
+      then:
+        - logger.log: Hello World!
 
 esp32:
   board: {{esp32board}}
@@ -7,6 +11,4 @@ esp32:
     type: arduino
 
 logger:
-
-
 
