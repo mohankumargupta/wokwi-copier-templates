@@ -17,5 +17,5 @@ _board_map:
 
 esp32board:
   type: str
-  default: "{{ _board_map.get(esp32, 'esp32dev') }}"
+  default: "{{_board_map.get(esp32, 'esp32dev')}}"
   when: false
