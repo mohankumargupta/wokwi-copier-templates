@@ -10,12 +10,15 @@ esp32:
     - esp32c3
     - esp32s3
 
-_board_map:
-  esp32: esp32dev
-  esp32c3: esp32-c3-devkitm-1
-  esp32s3: esp32-s3-devkitm-1
+board_map:
+  type: yaml
+  when: false
+  default:
+    esp32: esp32dev
+    esp32c3: esp32-c3-devkitm-1
+    esp32s3: esp32-s3-devkitm-1
 
 esp32board:
   type: str
-  default: "{{_board_map.get(esp32, 'esp32dev')}}"
+  default: "{{board_map.get(esp32, 'esp32dev')}}"
   when: false
