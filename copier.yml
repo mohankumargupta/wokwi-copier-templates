@@ -17,5 +17,5 @@ _board_map:
 
 esp32board:
   type: str
-  default: "{% if esp_chip in _board_map %}{{ _board_map[esp_chip] }}{% else %}esp32dev{% endif %}"
+  default: "{% if esp32 in _board_map %}{{ _board_map[esp_chip] }}{% else %}wokwi-esp32-devkit-v1{% endif %}"
   when: false
