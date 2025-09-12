@@ -1,4 +1,21 @@
 project_name:
   type: str
-  help: "Enter project name"
+  help: Enter project name
 
+esp32:
+  type: str
+  help: Choose your esp32 board
+  choices:
+    - esp32
+    - esp32c3
+    - esp32s3
+
+_board_map:
+  esp32: wokwi-esp32-devkit-v1
+  esp32c3: esp32-c3-devkitm-1
+  esp32s3: esp32-s3-devkitm-1
+
+esp32board:
+  type: str
+  default: "{% if esp_chip in _board_map %}{{ _board_map[esp_chip] }}{% else %}esp32dev{% endif %}"
+  when: false
