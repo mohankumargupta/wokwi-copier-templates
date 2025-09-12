@@ -26,3 +26,5 @@ esp32board:
 _exclude:
   - .gitignore
   - README.md
+  - .git
+  - copier.yml
