@@ -36,7 +36,7 @@ psram:
 
 esp32psram:
   type: int
-  default: "{{board_map.get(esp32, 0)}}"
+  default: "{{psram.get(esp32, 0)}}"
   when: false
     
 wokwi_board_map:
