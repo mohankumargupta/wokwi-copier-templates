@@ -9,6 +9,7 @@ esp32:
     - esp32
     - esp32c3
     - esp32s3
+    - esp32s3box3
 
 board_map:
   type: yaml
@@ -16,13 +17,28 @@ board_map:
   default:
     esp32: esp32dev
     esp32c3: esp32-c3-devkitm-1
-    esp32s3: esp32-s3-devkitm-1
-        
+    esp32s3: esp32-s3-devkitm-1    
+    esp32s3box3: esp32-s3-devkitm-1    
+
 esp32board:
   type: str
   default: "{{board_map.get(esp32, 'esp32dev')}}"
   when: false
 
+psram:
+  type: yaml
+  when: false
+  default:
+    esp32: 0
+    esp32c3: 0
+    esp32s3: 0
+    esp32s3box3: 16
+
+esp32psram:
+  type: int
+  default: "{{board_map.get(esp32, 0)}}"
+  when: false
+    
 wokwi_board_map:
   type: yaml
   when: false
@@ -41,3 +57,4 @@ _exclude:
   - README.md
   - .git
   - copier.yml
+
