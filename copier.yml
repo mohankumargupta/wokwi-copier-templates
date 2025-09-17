@@ -45,7 +45,7 @@ wokwi_board_map:
   default:
     esp32: wokwi-esp32-devkit-v1 
     esp32c3: board-esp32-c3-devkitm-1
-    esp32s3: board-esp32-s3-devkitm-1
+    esp32s3: board-esp32-s3-devkitc-1
 
 wokwi_board:
   type: str
