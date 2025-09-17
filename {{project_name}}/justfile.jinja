@@ -3,3 +3,6 @@ set windows-shell := ["powershell", "-c"]
 
 compile:
     uvx --with=pip esphome compile {{project_name}}.yaml
+
+copy: compile
+	@python3 copy.py
